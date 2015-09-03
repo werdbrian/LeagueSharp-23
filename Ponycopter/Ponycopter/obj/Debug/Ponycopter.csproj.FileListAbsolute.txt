@@ -1,0 +1,2 @@
+C:\Users\Brandon\LeagueSharp\Ponycopter\Ponycopter\bin\Debug\Ponycopter.exe.config
+C:\Users\Brandon\LeagueSharp\Ponycopter\Ponycopter\obj\Debug\Ponycopter.csprojResolveAssemblyReference.cache
