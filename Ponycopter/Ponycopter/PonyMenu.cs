@@ -51,9 +51,9 @@ namespace Ponycopter {
 
             // Jungle Clear
             Config.AddSubMenu(new Menu("Jungle Clear", "JungleClear"));
-            Config.SubMenu("LaneClear").AddItem(new MenuItem("JungleClear.Q", "Use Q").SetValue(true));
-            Config.SubMenu("LaneClear").AddItem(new MenuItem("JungleClear.W", "Use W").SetValue(true));
-            Config.SubMenu("LaneClear").AddItem(new MenuItem("JungleClear.E", "Use E").SetValue(true));
+            Config.SubMenu("JungleClear").AddItem(new MenuItem("JungleClear.Q", "Use Q").SetValue(true));
+            Config.SubMenu("JungleClear").AddItem(new MenuItem("JungleClear.W", "Use W").SetValue(true));
+            Config.SubMenu("JungleClear").AddItem(new MenuItem("JungleClear.E", "Use E").SetValue(true));
 
             Config.AddSubMenu(new Menu("Misc", "Misc"));
             Config.SubMenu("Misc").AddItem(new MenuItem("InteruptE", "Interrupt with E").SetValue(true));
@@ -84,6 +84,8 @@ namespace Ponycopter {
                 DrawDamage.Fill = eventArgs.GetNewValue<Circle>().Active;
                 DrawDamage.FillColor = eventArgs.GetNewValue<Circle>().Color;
             };
+
+            Config.AddToMainMenu();
         }
     }
 }

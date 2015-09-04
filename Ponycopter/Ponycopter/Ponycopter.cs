@@ -90,7 +90,7 @@ namespace Ponycopter {
                 break;
 			}
 
-            if (PonyMenu.Config.Item("Misc.AutoHarass").GetValue<KeyBind>().Active) {
+            if (PonyMenu.Config.Item("AutoHarass").GetValue<KeyBind>().Active) {
                 AutoHarass();
             }
 		}
@@ -102,7 +102,7 @@ namespace Ponycopter {
 		    var useW = PonyMenu.Config.Item("LaneClear.W").GetValue<bool>();
 		    var minMinions = PonyMenu.Config.Item("LaneClear.MinMinions").GetValue<Slider>().Value;
             var lanemana = PonyMenu.Config.Item("LaneClear.MinMana").GetValue<Slider>().Value;
-			var minionObj = MinionManager.GetMinions(Spells.Q.Range, MinionTypes.All, MinionTeam.NotAlly, MinionOrderTypes.MaxHealth);
+			var minionObj = MinionManager.GetMinions(Spells.Q.Range, MinionTypes.All, MinionTeam.Enemy, MinionOrderTypes.MaxHealth);
 
             if (!minionObj.Any())
                 return;
@@ -118,7 +118,7 @@ namespace Ponycopter {
 		    var useQ = PonyMenu.Config.Item("JungleClear.Q").GetValue<bool>();
 		    var useW = PonyMenu.Config.Item("JungleClear.W").GetValue<bool>();
 		    var useE = PonyMenu.Config.Item("JungleClear.W").GetValue<bool>();
-			var minionObj = MinionManager.GetMinions(Spells.Q.Range, MinionTypes.All, MinionTeam.NotAlly, MinionOrderTypes.MaxHealth);
+			var minionObj = MinionManager.GetMinions(Spells.Q.Range, MinionTypes.All, MinionTeam.Neutral, MinionOrderTypes.MaxHealth);
 
             if (!minionObj.Any())
                 return;
@@ -155,9 +155,10 @@ namespace Ponycopter {
         #region Combo
         public static void Combo() {
 			var target = TargetSelector.GetTarget(Spells.R.Range, TargetSelector.DamageType.Physical);
-            var enemys = target.CountEnemiesInRange(Spells.R.Range);
             if (target == null || !target.IsValidTarget())
                 return;
+
+            var enemys = target.CountEnemiesInRange(Spells.R.Range);
 
             var useQ = PonyMenu.Config.Item("Combo.Q").GetValue<bool>();
             var useW = PonyMenu.Config.Item("Combo.W").GetValue<bool>();
@@ -165,7 +166,7 @@ namespace Ponycopter {
             var useR = PonyMenu.Config.Item("Combo.R").GetValue<bool>();
             var rEnemies = PonyMenu.Config.Item("Combo.RCount").GetValue<Slider>().Value;
 
-            if (useE && Spells.E.IsReady() && target.IsValidTarget(2000))
+            if (useE && Spells.E.IsReady() && target.IsValidTarget(3000))
                 Spells.E.Cast();
 
             if (useW && Spells.W.IsReady() && target.IsValidTarget(Spells.W.Range))
@@ -175,8 +176,8 @@ namespace Ponycopter {
                 Spells.Q.Cast();
 
             if (useR && Spells.R.IsReady() && target.IsValidTarget(Spells.R.Range))
-                if (rEnemies <= enemys)
-                    Spells.R.CastIfHitchanceEquals(target, CustomHitChance);
+                if (rEnemies <= enemys && Spells.R.GetPrediction(target).Hitchance >= CustomHitChance)
+                    Spells.R.Cast(target.Position.Shorten(Player.Position, 150));
 		}
 		#endregion
 
@@ -239,7 +240,7 @@ namespace Ponycopter {
 			Spells.Q = new Spell(SpellSlot.Q, 350);
 			Spells.W = new Spell(SpellSlot.W, 525);
 			Spells.E = new Spell(SpellSlot.E, 600);
-			Spells.R = new Spell(SpellSlot.R, 1000);
+			Spells.R = new Spell(SpellSlot.R, 800);
 			CustomEvents.Game.OnGameLoad += OnLoad;
 		}
 		#endregion
