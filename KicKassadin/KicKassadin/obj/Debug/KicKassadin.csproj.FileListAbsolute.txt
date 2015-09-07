@@ -1,0 +1,12 @@
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\bin\Release\KicKassadin.exe.config
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\bin\Release\KicKassadin.exe
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\bin\Release\KicKassadin.pdb
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\bin\Release\LeagueSharp.Common.dll
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\bin\Release\LeagueSharp.dll
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\bin\Release\SharpDX.dll
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\bin\Release\SharpDX.Direct3D9.dll
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\bin\Release\clipper_library.dll
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\bin\Release\LeagueSharp.Sandbox.dll
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\obj\Debug\KicKassadin.csprojResolveAssemblyReference.cache
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\obj\Debug\KicKassadin.exe
+C:\Users\Brandon\LeagueSharp\KicKassadin\KicKassadin\obj\Debug\KicKassadin.pdb
