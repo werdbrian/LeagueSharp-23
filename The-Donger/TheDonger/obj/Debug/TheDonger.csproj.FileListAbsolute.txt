@@ -1,0 +1,12 @@
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\bin\Release\The Donger.exe.config
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\bin\Release\The Donger.exe
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\bin\Release\The Donger.pdb
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\bin\Release\LeagueSharp.Common.dll
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\bin\Release\LeagueSharp.dll
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\bin\Release\SharpDX.dll
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\bin\Release\SharpDX.Direct3D9.dll
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\bin\Release\clipper_library.dll
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\bin\Release\LeagueSharp.Sandbox.dll
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\obj\Debug\TheDonger.csprojResolveAssemblyReference.cache
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\obj\Debug\The Donger.exe
+C:\Users\Brandon\LeagueSharp\The-Donger\TheDonger\obj\Debug\The Donger.pdb
