@@ -271,7 +271,7 @@ namespace KicKassadin {
         }
 
         #endregion
- ``````public static void Orbwalking_AfterAttack(AttackableUnit unit, AttackableUnit target)
+        public static void Orbwalking_AfterAttack(AttackableUnit unit, AttackableUnit target)
         {
             var hero = unit as Obj_AI_Hero;
             if (hero != null && hero.Type == GameObjectType.obj_AI_Hero)
