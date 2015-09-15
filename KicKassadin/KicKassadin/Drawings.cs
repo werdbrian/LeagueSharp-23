@@ -37,8 +37,8 @@ namespace KicKassadin
                     var currentCheckPoint2 = playerPosition + corkiERange * direction.Rotated(currentAngel);
                     var currentScreenCheckPoint1 = Drawing.WorldToScreen(currentCheckPoint1.To3D());
                     var currentScreenCheckPoint2 = Drawing.WorldToScreen(currentCheckPoint2.To3D());
-                    Drawing.DrawLine(currentScreenPlayer.X, currentScreenPlayer.Y, currentScreenCheckPoint1.X, currentScreenCheckPoint1.Y, 2, Corki.spells[Spells.E].IsReady() ? Color.Green : Color.Red);
-                    Drawing.DrawLine(currentScreenPlayer.X, currentScreenPlayer.Y, currentScreenCheckPoint2.X, currentScreenCheckPoint2.Y,2,  Corki.spells[Spells.E].IsReady() ? Color.Green : Color.Red);
+                    Drawing.DrawLine(currentScreenPlayer.X, currentScreenPlayer.Y, currentScreenCheckPoint1.X, currentScreenCheckPoint1.Y, 2, KicKassadin.spells[Spells.E].IsReady() ? Color.Green : Color.Red);
+                    Drawing.DrawLine(currentScreenPlayer.X, currentScreenPlayer.Y, currentScreenCheckPoint2.X, currentScreenCheckPoint2.Y,2,  KicKassadin.spells[Spells.E].IsReady() ? Color.Green : Color.Red);
                         
                     }
             if (drawW)
