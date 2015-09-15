@@ -142,7 +142,6 @@ namespace KicKassadin {
 
             if (useR && spells[Spells.R].IsReady() && (!target.UnderTurret() || forceDive)) {
                 var extraEnemies = Player.Position.GetEnemiesInRange(1000).Count;
-                if (extraEnemies==0) return;
                 if (extraEnemies <= dontRCount)
                 {
                     spells[Spells.R].CastIfHitchanceEquals(target, CustomHitChance);
