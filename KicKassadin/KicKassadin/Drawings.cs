@@ -26,7 +26,7 @@ namespace KicKassadin
                   //  Render.Circle.DrawCircle(ObjectManager.Player.Position, KicKassadin.spells[Spells.E].Range, Color.White);
                     const int corkiERange = KicKassadin.spells[Spells.E].Range;
                     Render.Circle.DrawCircle(ObjectManager.Player.Position, KicKassadin.spells[Spells.E].Range, KicKassadin.spells[Spells.E].IsReady() ? Color.Green : Color.Red);
-                    //var pos = ObjectManager.Player.Position.To2D() + 600 * ObjectManager.Player.Direction.To2D().Perpendicular();
+                    var pos = ObjectManager.Player.Position.To2D() + 600 * ObjectManager.Player.Direction.To2D().Perpendicular();
                     Drawing.DrawCircle(pos.To3D(), 50, KicKassadin.spells[Spells.E].IsReady() ? Color.Green : Color.Red);
                     var playerPosition = ObjectManager.Player.Position.To2D();
                     var direction = ObjectManager.Player.Direction.To2D().Perpendicular();
