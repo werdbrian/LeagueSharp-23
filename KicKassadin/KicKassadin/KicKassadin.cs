@@ -83,6 +83,7 @@ namespace KicKassadin {
 
             Game.OnUpdate += Game_OnUpdate;
             Drawing.OnDraw += Drawings.Drawing_OnDraw;
+            Orbwalking.AfterAttack += Orbwalking_AfterAttack;
         }
         #endregion
 
@@ -270,7 +271,18 @@ namespace KicKassadin {
         }
 
         #endregion
-
+ ``````public static void Orbwalking_AfterAttack(AttackableUnit unit, AttackableUnit target)
+        {
+            var hero = unit as Obj_AI_Hero;
+            if (hero != null && hero.Type == GameObjectType.obj_AI_Hero)
+            {
+                if (Orbwalker.ActiveMode == Orbwalking.OrbwalkingMode.Combo)
+                {
+                    if (!hero.HasBuffOfType(BuffType.Slow))
+                        KL.Spellbook["W"].Cast();
+                }
+            }
+        }
         #region Main
         static void Main(string[] args) {
             CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
