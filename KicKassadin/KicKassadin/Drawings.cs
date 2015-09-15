@@ -24,7 +24,7 @@ namespace KicKassadin
                 if (KicKassadin.spells[Spells.E].Level > 0)
                     {
                   //  Render.Circle.DrawCircle(ObjectManager.Player.Position, KicKassadin.spells[Spells.E].Range, Color.White);
-                     float corkiERange = KicKassadin.spells[Spells.E].Range;
+                     float range = KicKassadin.spells[Spells.E].Range;
                     Render.Circle.DrawCircle(ObjectManager.Player.Position, KicKassadin.spells[Spells.E].Range, KicKassadin.spells[Spells.E].IsReady() ? Color.Green : Color.Red);
                     var pos = ObjectManager.Player.Position.To2D() + 600 * ObjectManager.Player.Direction.To2D().Perpendicular();
                     Drawing.DrawCircle(pos.To3D(), 50, KicKassadin.spells[Spells.E].IsReady() ? Color.Green : Color.Red);
@@ -32,9 +32,9 @@ namespace KicKassadin
                     var direction = ObjectManager.Player.Direction.To2D().Perpendicular();
                     var currentScreenPlayer = Drawing.WorldToScreen(ObjectManager.Player.Position);
                     var currentAngel = 40 * (float) Math.PI / 180;
-                    var currentCheckPoint1 = playerPosition + corkiERange * direction.Rotated(currentAngel);
+                    var currentCheckPoint1 = playerPosition + range * direction.Rotated(currentAngel);
                     currentAngel = 320 * (float) Math.PI / 180;
-                    var currentCheckPoint2 = playerPosition + corkiERange * direction.Rotated(currentAngel);
+                    var currentCheckPoint2 = playerPosition + range * direction.Rotated(currentAngel);
                     var currentScreenCheckPoint1 = Drawing.WorldToScreen(currentCheckPoint1.To3D());
                     var currentScreenCheckPoint2 = Drawing.WorldToScreen(currentCheckPoint2.To3D());
                     Drawing.DrawLine(currentScreenPlayer.X, currentScreenPlayer.Y, currentScreenCheckPoint1.X, currentScreenCheckPoint1.Y, 2, KicKassadin.spells[Spells.E].IsReady() ? Color.Green : Color.Red);
