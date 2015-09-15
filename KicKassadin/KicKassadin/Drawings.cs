@@ -18,7 +18,9 @@ namespace KicKassadin
 
             if (drawQ)
                 if (KicKassadin.spells[Spells.Q].Level > 0)
-                    Render.Circle.DrawCircle(ObjectManager.Player.Position, KicKassadin.spells[Spells.Q].Range, Color.White);
+                    Render.Circle.DrawCircle(ObjectManager.Player.Position, KicKassadin.spells[Spells.Q].Range, KicKassadin.spells[Spells.Q].IsReady() ? Color.Green : Color.Red);
+
+                    //Render.Circle.DrawCircle(ObjectManager.Player.Position, KicKassadin.spells[Spells.Q].Range, Color.White);
 
             if (drawE)
                 if (KicKassadin.spells[Spells.E].Level > 0)
@@ -43,11 +45,11 @@ namespace KicKassadin
                     }
             if (drawW)
                 if (KicKassadin.spells[Spells.W].Level > 0)
-                    Render.Circle.DrawCircle(ObjectManager.Player.Position, KicKassadin.spells[Spells.W].Range, Color.White);
+                    Render.Circle.DrawCircle(ObjectManager.Player.Position, KicKassadin.spells[Spells.W].Range, KicKassadin.spells[Spells.W].IsReady() ? Color.Green : Color.Red);
 
             if (drawR)
                 if (KicKassadin.spells[Spells.R].Level > 0)
-                    Render.Circle.DrawCircle(ObjectManager.Player.Position, KicKassadin.spells[Spells.R].Range, Color.White);
+                    Render.Circle.DrawCircle(ObjectManager.Player.Position, KicKassadin.spells[Spells.R].Range, KicKassadin.spells[Spells.R].IsReady() ? Color.Green : Color.Red);
         }
     }
 }
