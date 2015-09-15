@@ -61,7 +61,7 @@ namespace KicKassadin {
 
             // Set skillshots
             spells[Spells.Q].SetTargetted(0.5f, 1400);
-            spells[Spells.E].SetSkillshot(0.5f, 10f, (45 * Math.PI / 180), false, SkillshotType.SkillshotCone);
+            spells[Spells.E].SetSkillshot(0.5f, 10f, (float)(45 * Math.PI / 180), false, SkillshotType.SkillshotCone);
             spells[Spells.R].SetSkillshot(0.5f, 150f, float.MaxValue, false, SkillshotType.SkillshotCircle);
 
             _ignite = SpellSlot.Summoner2;
