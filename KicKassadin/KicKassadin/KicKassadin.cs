@@ -276,11 +276,7 @@ namespace KicKassadin {
             var hero = unit as Obj_AI_Hero;
             if (hero != null && hero.Type == GameObjectType.obj_AI_Hero)
             {
-                if (Orbwalker.ActiveMode == Orbwalking.OrbwalkingMode.Combo)
-                {
-                    if (!hero.HasBuffOfType(BuffType.Slow))
-                        KL.Spellbook["W"].Cast();
-                }
+                spells[Spells.W].Cast(hero.Position);
             }
         }
         #region Main
