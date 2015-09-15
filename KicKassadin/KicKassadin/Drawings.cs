@@ -31,9 +31,9 @@ namespace KicKassadin
                     var playerPosition = ObjectManager.Player.Position.To2D();
                     var direction = ObjectManager.Player.Direction.To2D().Perpendicular();
                     var currentScreenPlayer = Drawing.WorldToScreen(ObjectManager.Player.Position);
-                    var currentAngel = 40 * (float) Math.PI / 180;
+                    var currentAngel = 45 * (float) Math.PI / 180;
                     var currentCheckPoint1 = playerPosition + range * direction.Rotated(currentAngel);
-                    currentAngel = 320 * (float) Math.PI / 180;
+                    currentAngel = 315 * (float) Math.PI / 180;
                     var currentCheckPoint2 = playerPosition + range * direction.Rotated(currentAngel);
                     var currentScreenCheckPoint1 = Drawing.WorldToScreen(currentCheckPoint1.To3D());
                     var currentScreenCheckPoint2 = Drawing.WorldToScreen(currentCheckPoint2.To3D());
